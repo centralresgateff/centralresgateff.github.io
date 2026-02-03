@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    width: 95%;
+    max-width: 390px;
+    background: #0f0f0f;
+    padding: 35px 20px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0,0,0,1);
+}
+
+/* TITULO */
+.titulo-wrapper {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.white { color: #fff; }
+
+.red {
+    color: #ff0000;
+    text-shadow: 0 0 15px rgba(255,0,0,.7);
+}
+
+/* TEXTO */
+p {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* BOTÃO */
+.btn-main {
+    width: 92%;
+    max-width: 320px;
+    padding: 16px;
+    border: none;
+    background: #ff0000;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    cursor: pointer;
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
+    transition: .2s;
+}
+
+.btn-main:hover {
+    transform: scale(1.03);
+    background: #e60000;
+}
+
+/* LOADER */
+.loader-box {
+    display: none;
+}
+
+.loader-title {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+}
+
+.loader-status {
+    font-size: 12px;
+    color: #ff0000;
+}
+
+.bar-container {
+    width: 100%;
+    height: 12px;
+    background: #222;
+    margin: 25px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    width: 0%;
+    height: 100%;
+    background: #ff0000;
+    animation: fillBar 3s forwards;
+}
+
+@keyframes fillBar {
+    to { width: 100%; }
+}
+
+/* FINAL */
+.final-screen {
+    display: none;
+}
+
+.card-preview {
+    background: #000;
+    border-radius: 15px;
+    padding: 8px;
+    border: 2px solid #ff0000;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.img-ff {
+    width: 100%;
+    border-radius: 10px;
+    opacity: .5;
+    filter: grayscale(.5);
+}
+
+.overlay-lock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+.success-msg {
+    background: rgba(0,255,0,.1);
+    border-left: 4px solid #28a745;
+    padding: 12px;
+    font-size: .9rem;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO FINAL */
+.btn-unlock {
+    background: #28a745;
+    clip-path: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: 95%;
+}
+
+/* UTIL */
+.active { display: block !important; }
+.hidden { display: none !important; }
